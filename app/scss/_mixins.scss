@@ -1,0 +1,13 @@
+@mixin absolute-center {
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	margin:auto;
+	left:0;
+	right:0;
+}
+
+@mixin border($border-width, $border-type, $border-color, $border-radius) {
+	border: $border-width $border-type $border-color;
+	border-radius: $border-radius;
+}

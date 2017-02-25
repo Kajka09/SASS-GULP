@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+	background-color: pink;
+	color: $base-font-color; 
+}
+
+body a {
+	color: $base-font-color;
+}
+/* Nav menu styles */
+nav {
+	ul {
+		list-style:none;
+		
+		li {
+			display:inline-block;
+			
+			&.first {
+				a {
+					color:green;
+				}
+			}
+			
+			a {
+				color: $nav-links-color;
+				text-decoration: none;
+				
+				&:hover {
+					color:red;
+				}
+			}
+		}
+	}
+}
+
+.outer {
+	width:600px;
+	height:600px;
+	background-color: greenyellow;
+	position: relative;
+	
+	.inner {
+		max-width:100px;
+		@include absolute-center;
+	}
+}
+
+#square {
+	height:200px;
+	width:200px;
+	background-color: lightgoldenrodyellow;
+	position: relative;
+	@include border(2px, solid, blue, 20px);
+	
+	#circle {
+		height:50px;
+		width:50px;
+		background-color: orange;
+		border-radius:50%;
+		@include absolute-center;
+	}
+}
